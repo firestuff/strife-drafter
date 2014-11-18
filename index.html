@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Strife Drafter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/cosmopolite/static/cosmopolite.js" charset="UTF-8"></script>
+    <script src="/static/draft.js" charset="UTF-8"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="team-column" style="order: 1;">
+        <div>
+          <button id="glory">Glory</button>
+        </div>
+        <div id="glory-cont"></div>
+      </div>
+
+      <div class="team-column" style="order: 3;">
+        <div>
+          <button id="valor">Valor</button>
+        </div>        
+	      <div id="valor-cont"></div>
+      </div>
+
+      <div class="hero-column" style="order: 2;">
+				<div class="title-container">
+				 	<div class="timer">
+						<div id="glory-step"></div>
+						<div id="glory-extra"></div>
+					</div>
+          <div id="game-title"></div>
+          <div class="timer">
+						<div id="valor-step"></div>
+						<div id="valor-extra"></div>
+          </div>
+        </div>
+        <div id="heroes">
+          <div id="countdown"></div>
+          <div id="slide"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

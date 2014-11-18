@@ -1,0 +1,227 @@
+@-webkit-keyframes flipIn {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+.observer {
+  cursor: none;
+}
+
+.observer > * {
+  pointer-events: none;
+}
+
+div.observer {
+  pointer-events: none;
+}
+
+button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-family: Oswald, sans-serif; 
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.hero-medium {
+  width: 96px;
+  height: 96px;
+  margin-top: 2px;
+  border-radius: 10px;     
+}
+
+.hero-overlay {
+  display: inline-block;
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 5px;
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.hero-overlay:hover {
+  opacity: 0.7;
+}
+
+.hero-unavailable {
+  transition: transform 0.5s;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  cursor: default;
+}
+
+.hero-unavailable:hover {
+  opacity: 0.3;
+}
+
+.hero-cont {
+  background-color: grey;
+  width:  100px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;     
+  transition: box-shadow 0.5s;
+}
+
+.heroban-cont {
+  background: url("ban.png") no-repeat 0 0, grey;
+  background-position: 0px 0px;    
+  background-size: 100% 100%;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;    
+  transition: box-shadow 0.5s;
+}
+
+.hero-cont .hero-overlay {
+  margin: 0;
+  cursor: default;
+  -webkit-animation-name: flipIn;
+  -webkit-animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.5s;
+  backface-visibility: hidden;
+}
+
+.hero-cont .hero-overlay:hover {
+  opacity: 1.0;
+}
+
+.heroban-cont .hero-overlay {
+  margin: 0;
+  opacity: 0.3;
+  cursor: default;
+  -webkit-animation-name: flipIn;
+  -webkit-animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.5s;
+  backface-visibility: hidden;
+}
+
+.heroban-cont .hero-overlay:hover {
+  opacity: 0.3;
+}
+
+.next-step {
+  box-shadow: 0 0 10px red;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: Oswald, sans-serif; 
+  font-size: 15px;
+  text-shadow: 0 0 1px black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.team-column {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.hero-column {
+  text-align: center;
+  margin: 10px;
+  max-width: 800px;
+}
+
+.title-container {
+  display: flex;
+}
+
+.timer {
+  font-family: Audiowide, sans-serif;
+  min-width: 5em;
+}
+
+#game-title {
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+#heroes {
+  position: relative;
+}
+
+#countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  font-size: 200px;
+  line-height: 200%;
+  color: black;
+  text-shadow: 0 0 15px white;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+  opacity: 0.0;
+  transition: opacity 0.5s, z-index 0.5s;
+  font-family: Audiowide, sans-serif;
+}
+
+#countdown.active {
+  z-index: 100;
+  opacity: 1.0;
+}
+
+#slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  font-size: 200px;
+  line-height: 200%;
+  color: black;
+  cursor: default;
+  opacity: 0.0;
+  transition: opacity 2s, z-index 2s;
+  font-family: Oswald, sans-serif; 
+  background: white url("fctv.svg") no-repeat top;
+  background-size: 100% 100%;
+}
+
+#slide.active {
+  z-index: 100;
+  opacity: 1.0;
+}
